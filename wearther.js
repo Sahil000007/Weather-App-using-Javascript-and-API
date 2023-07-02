@@ -28,16 +28,7 @@ cityname.innerHTML=city
 
      .catch(err=>console.error(err));
 }
-	//  cloud_pct=Response.cloud_pct
-	//  feels_like=Response.feels_like
-	//  humidity=Response.humidity
-	//  max_temp=Response.max_temp
-	//  min_temp=Response.min_temp
-	//  sunrise=Response.sunrise
-	//  sunset=Response.sunset
-	//  temp=Response.temp
-	//  wind_degrees=Response.wind_degrees
-	//  wind_spee =Response.wind_spee
+	
 
 	document.getElementById("ss").addEventListener("click",(e)=>{		
 		e.preventDefault()
@@ -46,13 +37,7 @@ cityname.innerHTML=city
 	getweather(" Pune")
 	
 
-	// const options = {
-	// 	method: 'GET',
-	// 	headers: {
-	// 		'X-RapidAPI-Key': '6c44eec31emsh62b09dd4f126661p177b8ejsn7ac8d2591185',
-	// 		'X-RapidAPI-Host': 'weather-by-api-ninjas.p.rapidapi.com'
-	// 	}
-	// };
+
 	
 	// mumbai
 		 fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=mumbai' , options)
