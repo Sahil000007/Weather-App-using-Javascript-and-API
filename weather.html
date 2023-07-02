@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg " style="background-color: blue;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="color: white;"> WEATHER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">usage guide</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                    About WEATHER  
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#" id="mum">surat</a></li>
+                  <li><a class="dropdown-item" href="#" id="mumb">Hyderabad</a></li>
+                  <li><a class="dropdown-item" href="#" id="mu">Goa</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div style="margin: auto;">
+            <input type="text" placeholder="search your city" id="cit" >
+            <button style="background-color: blue; color: white; border-radius: 3px;" id="ss" >search</button>
+          </div></div>
+        </div>
+      </nav>
+      <main class="mt-8 container">
+        <h1 class="mt-5 mb-8" style="display: flex; justify-content: center;">Weather for <span style="margin-left: 9px;" id="cityname"></span></h1>
+        <div class="row row-cols-0 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Temperature</h4>
+              </div>
+              <div class="card-body" style="border: 1px solid blue;">
+                <h1 class="card-title pricing-card-title"><span id="temp"></span><span>&#8451;</span>
+                  <small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Temperature is <span id="temp2"></span></li>
+                  <!-- <li>Humidity is <span id="humid"></span></li> -->
+                  <li>cloud_pct is <span id="cloud_pct"></span></li>
+                  <li >Sunrise <span id="sunrise"></span></li>
+                </ul>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Humidity </h4>
+              </div>
+              <div class="card-body" style="border: 1px solid blue;">
+                <h1 class="card-title pricing-card-title"> <span id="humid"></span><small class="text-body-secondary fw-light">%</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li> max_temp is <span id="max_temp"></span></li>
+                  <li> min_temp is <span id="min_temp"></span></li>
+                  <li>Humidity is <span id="humid2"></span></li>
+
+                  <!-- <li> wind_speed is <span id="wind_speed"></span></li> -->
+
+                </ul>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="wind_speed"></span><small class="text-body-secondary fw-light">km/hr</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Sunset <span id="sunset"></span></li>
+                  <li> feels_like is <span id="feels_like"></span></li>
+                  <li> wind_degrees is <span id="wind_degrees"></span></li>
+                            </ul>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <h2 class="display-6 text-center mb-4">Weather of some cities</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th scope="row" class="text-start"></th>
+                <th >Temp</th>
+                <th >cloud_pc</th>
+                <th >Feels_like</th>
+                <th >Humidity</th>
+                <th >Max_temp</th>
+                <th >Min_temp</th>
+                <th >Sunrise</th>
+                <th >Sunset</th>
+                <th >Wind_degree</th>
+                <th >Wind_speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Mumbai</th>
+                <td id="tem">0</td>
+                <td id="cloud">0</td>
+                <td id="feels">0</td>
+                <td id="hum">0</td>
+                <td id="max">0</td>
+                <td id="min">0</td>
+                <td id="sunr">0</td>
+                <td id="suns">0</td>
+                <td id="wind_d">0</td>
+                <td id="wind_s">0</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Lucknow</th>
+                <td id="teqqq">0</td>
+                <td id="clouqqq">0</td>
+                <td id="feelqqq">0</td>
+                <td id="huqqq">0</td>
+                <td id="maqqq">0</td>
+                <td id="miqqq">0</td>
+                <td id="sunqqq">0</td>
+                <td id="suqqq">0</td>
+                <td id="winddqqq">0</td>
+                <td id="windsqqq">0</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Bangalore</th>
+                <td id="te">0</td>
+                <td id="clou">0</td>
+                <td id="feel">0</td>
+                <td id="hu">0</td>
+                <td id="ma">0</td>
+                <td id="mi">0</td>
+                <td id="sun">0</td>
+                <td id="su">0</td>
+                <td id="windd">0</td>
+                <td id="winds">0</td>
+              <tr>
+                <th scope="row" class="text-start">Kolkata</th>
+                <td id="teq">0</td>
+                <td id="clouq">0</td>
+                <td id="feelq">0</td>
+                <td id="huq">0</td>
+                <td id="maq">0</td>
+                <td id="miq">0</td>
+                <td id="sunq">0</td>
+                <td id="suq">0</td>
+                <td id="winddq">0</td>
+                <td id="windsq">0</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Chennai</th>
+                <td id="teqq">0</td>
+                <td id="clouqq">0</td>
+                <td id="feelqq">0</td>
+                <td id="huqq">0</td>
+                <td id="maqq">0</td>
+                <td id="miqq">0</td>
+                <td id="sunqq">0</td>
+                <td id="suqq">0</td>
+                <td id="winddqq">0</td>
+                <td id="windsqq">0</td>
+
+              </tr>
+              
+            </tbody>
+    
+            
+          </table>
+        </div>
+        <div class="nn">
+            <!-- <div class="row justify-content-around">
+                <div class="col-md-3" >
+
+                    <h1 style="justify-content: center; align-items: center; border:  2px solid black;">free</h1>
+                    <div class="s" style="border:  2px solid black;">
+                    <h3>0</h3>
+                    <h6>10 users included</h6>
+                    <h6>2 GB of storage</h6>
+                    <h6>Email support</h6>
+                    <h6>Help center access</h6>
+                    <button class="btn" type="text" style=" width: 182px;
+                    border: 2px solid blue;">aa</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+      </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="wearther.js"></script>
+  </body>
+</html>
